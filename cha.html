@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chá de Panela da Vittoria e do Hudson 💍</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>Chá de Panela da Vittoria & Hudson 💕</h1>
+    <p class="intro">Escolha um presente com carinho e ajude-nos a montar nosso lar! ✨</p>
+    <div id="listaPresentes" class="presentes"></div>
+  </div>
+
+  <!-- Firebase SDK -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js";
+    import { getDatabase, ref, onValue, update } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js";
+
+    const firebaseConfig = {
+      apiKey: "SUA_API_KEY",
+      authDomain: "cha-de-panela-vh.firebaseapp.com",
+      databaseURL: "https://cha-de-panela-vh-default-rtdb.firebaseio.com",
+      projectId: "cha-de-panela-vh",
+      storageBucket: "cha-de-panela-vh.appspot.com",
+      messagingSenderId: "SENDER_ID",
+      appId: "APP_ID"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+
+    const lista = document.getElementById("listaPresentes");
+    const presentesRef = ref(database);
+
+    onValue(presentesRef, (snapshot) => {
+      lista.innerHTML = "";
+      const data = snapshot.val();
+      for (let key in data) {
+        const presente = data[key];
+        const card = document.createElement("div");
+        card.className = "presente" + (presente.escolhido ? " escolhido" : "");
+
+        card.innerHTML = `
+            <h3>${presente.Nome}</h3>
+            <button ${presente.escolhido ? "disabled" : ""} onclick="marcarEscolhido('${key}')">
+                ${presente.escolhido ? "🎁 Já escolhido" : "💗 Escolher"}
+            </button>
+        `;
+
+
+        lista.appendChild(card);
+      }
+    });
+
+    window.marcarEscolhido = function(key) {
+      const presenteRef = ref(database, key);
+      update(presenteRef, { escolhido: true }).then(() => {
+        window.location.href = "obrigado.html";
+      });
+    };
+  </script>
+</body>
+</html>
