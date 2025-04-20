@@ -71,6 +71,36 @@ body {
     pointer-events: none;
     text-decoration: line-through;
   }
+  .convite {
+    background-color: #fff0f6;
+    border: 2px dashed #f48fb1;
+    padding: 1.5rem;
+    margin: 2rem auto;
+    max-width: 600px;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 1.1em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .convite h2 {
+    color: #d36ba5;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 1rem;
+  }
+  
+  .mapa {
+    max-width: 800px;
+    margin: 2rem auto;
+    text-align: center;
+  }
+  
+  .mapa h3 {
+    color: #d36ba5;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 1rem;
+  }
+  
   
   /* Responsivo */
   @media (max-width: 600px) {
