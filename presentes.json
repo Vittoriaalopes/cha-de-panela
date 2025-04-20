@@ -12,7 +12,7 @@
       "escolhido": false
     },
     "presente4": {
-      "Nome": "Jogo de Panelas",
+      "Nome": "Panela de Pressão",
       "escolhido": false
     },
     "presente5": {
@@ -24,11 +24,11 @@
       "escolhido": false
     },
     "presente7": {
-      "Nome": "Jarra para Suco",
+      "Nome": "Jogo Americano",
       "escolhido": false
     },
     "presente8": {
-      "Nome": "Liquidificador",
+      "Nome": "Panos de Prato",
       "escolhido": false
     },
     "presente9": {
@@ -44,7 +44,7 @@
       "escolhido": false
     },
     "presente12": {
-      "Nome": "Batedeira",
+      "Nome": "Pirex",
       "escolhido": false
     },
     "presente13": {
@@ -61,6 +61,14 @@
     },
     "presente16": {
     "Nome": "Porta Temperos",
+    "escolhido": false
+    },
+    "presente17": {
+    "Nome": "Forma de Bolo",
+    "escolhido": false
+    },
+    "presente18": {
+    "Nome": "Jogo de Talheres",
     "escolhido": false
     }
   }
