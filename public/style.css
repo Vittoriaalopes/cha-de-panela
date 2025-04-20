@@ -3,7 +3,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     /*background-image: url("https://img.freepik.com/vetores-gratis/conjunto-de-elementos-de-cozinha-em-casa_1284-35611.jpg?t=st=1745156483~exp=1745160083~hmac=8b9a8dae4111bc4290678df2afaf9382e265ce11bec93492ccd992c884a2cf44&w=826");*/
-    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url('https://img.freepik.com/vetores-gratis/fundo-aquarela-para-celebracao-do-dia-internacional-do-cafe_23-2150756530.jpg?t=st=1745156034~exp=1745159634~hmac=4985ccb4063ad1998413768e9ad4e9f595d7597ef4ba522fe8d3769692102696&w=1060');
+    background: linear-gradient(rgba(255, 255, 255, 0.689), rgba(255, 255, 255, 0.656)), url('https://img.freepik.com/vetores-gratis/moderno-conjunto-de-icones-plana-de-varias-ferramentas-de-cozinha_74855-6572.jpg?t=st=1745161452~exp=1745165052~hmac=95439725479fec0c1b2b9a4935b1b1eb5271aa8416337de597eeb8e62162c332&w=1060');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
